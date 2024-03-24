@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./Join.css";
 import emailjs from "@emailjs/browser";
 
 const Join = () => {
   const form = useRef();
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -18,11 +19,16 @@ const Join = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setShowSuccessMessage(true);
         },
         (error) => {
           console.log(error.text);
         }
       );
+  };
+
+  const closeSuccessMessage = () => {
+    setShowSuccessMessage(false);
   };
 
   return (
@@ -46,9 +52,17 @@ const Join = () => {
             id="email"
             placeholder="Enter your Email address"
           />
-          <button className="btn btn-j">Join Now</button>
+          <button type="submit" className="btn btn-j">
+            Join Now
+          </button>
         </form>
       </div>
+      {showSuccessMessage && (
+        <div className="success-message">
+          <p>Your form has been submitted successfully!</p>
+          <button onClick={closeSuccessMessage}>Close</button>
+        </div>
+      )}
     </div>
   );
 };

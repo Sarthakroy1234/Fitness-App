@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "./App.css";
 import Hero from "./components/Hero/Hero";
 import Programs from "./components/Programs/Programs.jsx";
@@ -7,35 +7,25 @@ import Plans from "./components/Plans/Plans";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Join from "./components/Join/Join";
 import Footer from "./components/Footer/Footer";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header/Header.jsx';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header/Header.jsx";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Header/>
+        <Header />
         <Routes>
-
           <Route path="/" element={<Hero />} />
           <Route path="/home" element={<Hero />} />
           <Route path="/program" element={<Programs />} />
-          <Route path="/why" element={< Reasons/>} />
-          <Route path="/plan" element={<Plans/>} />
-          <Route path="/testi" element={<Testimonials/>} />
-          <Route path="/join" element={<Join/>} />
-
-         
-          {/* Other routes */}
+          <Route path="/why" element={<Reasons />} />
+          <Route path="/plan" element={<Plans />} />
+          <Route path="/testi" element={<Testimonials />} />
+          <Route path="/join" element={<Join />} />
         </Routes>
-        
-        {/* Other components */}
-        {/* <Reasons />
-        <Plans />
-        <Testimonials />
-        <Join />
-        <Footer /> */}
-         <Footer/>
+
+        <Footer />
       </div>
     </Router>
   );

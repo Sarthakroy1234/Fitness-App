@@ -7,6 +7,7 @@ import heart from "../../assets/heart.png";
 import calories from "../../assets/calories.png";
 import { motion } from "framer-motion";
 import NumberCounter from "number-counter";
+import Footer from "../Footer/Footer";
 
 const Hero = () => {
   const transition = { type: "spring", duration: 3 };
@@ -17,7 +18,7 @@ const Hero = () => {
       <div className="blur hero-blur"></div>
       {/* Left Side */}
       <div className="left-h">
-        <Header />
+        {/* <Header /> */}
         <div className="the-best-ad">
           <motion.div
             initial={{ left: mobile ? "178px" : "238px" }}
@@ -112,6 +113,7 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
+      
     </div>
   );
 };

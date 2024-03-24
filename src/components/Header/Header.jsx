@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./Header.css";
 import Logo from "../../assets/logo.png";
 import Bars from "../../assets/bars.png";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
+import Programs from "../Programs/Programs";
 
 const Header = () => {
   const mobile = window.innerWidth <= 768 ? true : false;
@@ -32,7 +33,7 @@ const Header = () => {
             <Link
               onClick={() => setMenuOpened(false)}
               activeClass="active"
-              to="hero"
+              to="/home"
               spy={true}
               smooth={true}
             >
@@ -41,8 +42,8 @@ const Header = () => {
           </li>
           <li>
             <Link
-              onClick={() => setMenuOpened(false)}
-              to="programs"
+              
+              to="/program"
               spy={true}
               smooth={true}
             >
@@ -52,7 +53,7 @@ const Header = () => {
           <li>
             <Link
               onClick={() => setMenuOpened(false)}
-              to="reasons"
+              to="/why"
               spy={true}
               smooth={true}
             >
@@ -62,7 +63,7 @@ const Header = () => {
           <li>
             <Link
               onClick={() => setMenuOpened(false)}
-              to="plans"
+              to="/plan"
               spy={true}
               smooth={true}
             >
@@ -72,11 +73,21 @@ const Header = () => {
           <li>
             <Link
               onClick={() => setMenuOpened(false)}
-              to="testimonials"
+              to="/testi"
               spy={true}
               smooth={true}
             >
               Testimonials
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={() => setMenuOpened(false)}
+              to="/join"
+              spy={true}
+              smooth={true}
+            >
+              Join Us
             </Link>
           </li>
         </ul>

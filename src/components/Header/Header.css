@@ -1,6 +1,8 @@
-.header {
+/* .header {
   display: flex;
   justify-content: space-between;
+ 
+  color: white;
 }
 
 .logo {
@@ -32,4 +34,41 @@
     background-color: lightcoral;
     padding: 2rem;
   }
+} */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px; /* Adjust height as needed */
+  /* background-color: var(--appColor); */
+}
+
+.logo {
+  height: 50px; /* Adjust logo size as needed */
+  margin-right: auto; /* Push logo to the left */
+  margin-left: 20px; /* Adjust left margin as needed */
+}
+
+.header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header-menu li {
+  margin: 0 10px; /* Adjust spacing between menu items */
+}
+
+.header-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px; /* Adjust font size as needed */
+  transition: color 0.3s ease;
+}
+
+.header-menu li a:hover {
+  color: #ffc107; /* Change color on hover */
 }

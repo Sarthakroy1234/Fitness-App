@@ -14,7 +14,7 @@ export const testimonialsData = [
     image : image2,
     review:'  The supportive staff, including professional trainers, create a welcoming atmosphere. They offer personalized guidance and workout plans, making beginners feel at ease and assisting members with any questions or concerns.',
     name: 'SARTHAK ROY',
-    status: "CUSTOMER"
+    status: "FOUNDER"
   },
   
 

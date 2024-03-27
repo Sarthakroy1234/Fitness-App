@@ -35,13 +35,13 @@
     padding: 2rem;
   }
 } */
-.header {
+/* .header {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80px; /* Adjust height as needed */
   /* background-color: var(--appColor); */
-}
+
 
 .logo {
   height: 50px; /* Adjust logo size as needed */
@@ -65,10 +65,10 @@
 .header-menu li a {
   color: white;
   text-decoration: none;
-  font-size: 16px; /* Adjust font size as needed */
+  font-size: 20px; /* Adjust font size as needed */
   transition: color 0.3s ease;
 }
 
 .header-menu li a:hover {
-  color: #ffc107; /* Change color on hover */
-}
+  color: lightcoral; /* Change color on hover */
+} 

@@ -52,8 +52,28 @@ const Join = () => {
             id="email"
             placeholder="Enter your Email address"
           />
+          <input
+  type="text"
+  name="User_name"
+  id="name"
+  placeholder="Enter your Name"
+/>
+<input
+  type="tel"
+  name="User_no"
+  id="contact"
+  placeholder="Enter your Contact No"
+/>
+<input
+  type="text"
+  name="User_Plan"
+  id="name"
+  placeholder="Enter your Plan"
+/>
+
+
           <button type="submit" className="btn btn-j">
-            Join Now
+           -> Join Now
           </button>
         </form>
       </div>

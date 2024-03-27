@@ -5,7 +5,7 @@
   --lightcoral: ;
   --darkGrey: #464D53;
   --caloryCard: #656565;
-  --planCard: linear-gradient(210.41deg, #fa5042 1.14%, #ffa739 100.75%);
+  --planCard: linear-gradient(210.41deg, pink, lightcoral);
   --appColor:  #3c3f45;
 }
 
@@ -30,19 +30,31 @@
 }
 
 .btn {
-  background-color: white;
+  background-color: pink;
   padding: 0.5rem;
   font-weight: bold;
   border: 4px solid transparent;
   transition: 300ms all;
+  border-radius: 50%; /* To make it a circle */
+  width: 100px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.btn:hover {
+  background-color: lightpink; /* Change color on hover */
+  border-color: pink; /* Show border on hover */
+}
+
 
 .btn:hover {
   cursor: pointer;
 }
 
 .blur {
-  background: rgba(253, 120, 43, 0.69);
+  background: lightcoral;
   position: absolute;
   border-radius: 50%;
   filter: blur(150px);

@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Plans.css";
 import { plansData } from "../../data/plansData";
 import whiteTick from '../../assets/whiteTick.png';
+import Join from "../Join/Join";
 
 const Plans = () => {
+  const [selectedPlan, setSelectedPlan] = useState(null);
+
+  const handleJoinClick = (plan) => {
+    setSelectedPlan(plan);
+  };
+
+  const handleGoBack = () => {
+    setSelectedPlan(null);
+  };
+
   return (
     <div className="plans-container" id="plans">
       <div className="blur plans-blur-1"></div>
@@ -17,27 +28,34 @@ const Plans = () => {
       {/* plans card */}
       <div className="plans">
         {plansData.map((plan, i) => (
-          <div className="plan" key={1}>
+          <div className="plan" key={i}>
             {plan.icon}
             <span>{plan.name}</span>
             <span>$ {plan.price}</span>
 
             <div className="features">
-              {plan.features.map((feature, i) => (
-                <div className="feature">
+              {plan.features.map((feature, index) => (
+                <div className="feature" key={index}>
                   <img src={whiteTick} alt="" />
-                  <span key={i}>{feature}</span>
+                  <span>{feature}</span>
                 </div>
               ))}
             </div>
 
             <div>
-              
+              <button onClick={() => handleJoinClick(plan)}>->Join Now</button>
             </div>
-            
           </div>
         ))}
       </div>
+
+      {/* Join Section */}
+      {selectedPlan && (
+        <Join
+          plan={selectedPlan}
+          closeJoinSection={handleGoBack}
+        />
+      )}
     </div>
   );
 };

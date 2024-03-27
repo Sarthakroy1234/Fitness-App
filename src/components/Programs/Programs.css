@@ -19,6 +19,8 @@
 .program-categories {
   display: flex;
   gap: 1rem;
+  
+  
 }
 
 .category {

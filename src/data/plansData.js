@@ -34,7 +34,7 @@ export const plansData = [
     features: [
       "5 hour of excercises",
       "Free consultaion of Coaches",
-      "Access to minibar",
+      "Access to SteamBath",
     ],
   },
   {

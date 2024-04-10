@@ -3,7 +3,6 @@ import "./Header.css";
 import Logo from "../../assets/logo.png";
 import Bars from "../../assets/bars.png";
 import { Link } from "react-router-dom";
-import Programs from "../Programs/Programs";
 
 const Header = () => {
   const mobile = window.innerWidth <= 768 ? true : false;
@@ -41,12 +40,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link
-              
-              to="/program"
-              spy={true}
-              smooth={true}
-            >
+            <Link to="/program" spy={true} smooth={true}>
               Programs
             </Link>
           </li>
@@ -81,11 +75,30 @@ const Header = () => {
             </Link>
           </li>
           <li>
+            <a
+              href="https://www.calculator.net/bmi-calculator.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Bmi-Calculator
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.calculator.net/calories-burned-calculator.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Calories-Calculator
+            </a>
+          </li>
+          <li>
             <Link
               onClick={() => setMenuOpened(false)}
               to="/join"
               spy={true}
               smooth={true}
+              className="join-button"
             >
               Join Us
             </Link>

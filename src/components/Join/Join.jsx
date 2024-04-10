@@ -5,30 +5,41 @@ import emailjs from "@emailjs/browser";
 const Join = () => {
   const form = useRef();
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_mohqx9r",
-        "template_lzldhhr",
-        form.current,
-        "iMImF_gvbihaApDQE"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setShowSuccessMessage(true);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
+  const [formData, setFormData] = useState({});
 
   const closeSuccessMessage = () => {
     setShowSuccessMessage(false);
+  };
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData({
+      ...formData,
+      [id]: value,
+    });
+  };
+
+  const submitFormData = async (e) => {
+    e.preventDefault();
+    console.log(formData);
+    try {
+      const response = await fetch("http://localhost:8000/api/user/putdata", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json();
+      console.log(data);
+      if (response.ok) {
+        setShowSuccessMessage(true);
+      } else {
+        console.error("Failed to submit form data");
+      }
+    } catch (error) {
+      console.error("Error submitting form data:", error);
+    }
   };
 
   return (
@@ -45,35 +56,41 @@ const Join = () => {
         </div>
       </div>
       <div className="right-j">
-        <form ref={form} className="email-container" onSubmit={sendEmail}>
+        <form className="email-container" onSubmit={submitFormData}>
           <input
             type="email"
-            name="user_email"
+            name="email"
             id="email"
             placeholder="Enter your Email address"
+            onChange={handleChange}
+            required
           />
           <input
-  type="text"
-  name="User_name"
-  id="name"
-  placeholder="Enter your Name"
-/>
-<input
-  type="tel"
-  name="User_no"
-  id="contact"
-  placeholder="Enter your Contact No"
-/>
-<input
-  type="text"
-  name="User_Plan"
-  id="name"
-  placeholder="Enter your Plan"
-/>
-
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your Name"
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="tel"
+            name="contact"
+            id="contact"
+            placeholder="Enter your Contact No"
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="text"
+            name="plan"
+            id="plan"
+            placeholder="Enter your Plan"
+            onChange={handleChange}
+          />
 
           <button type="submit" className="btn btn-j">
-           -> Join Now
+            -> Join Now
           </button>
         </form>
       </div>

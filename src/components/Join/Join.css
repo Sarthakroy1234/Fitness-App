@@ -89,6 +89,7 @@
 
 .join {
   display: flex;
+ 
   align-items: center;
   justify-content: space-between;
   padding: 20px;
@@ -170,4 +171,5 @@
 .btn-back:hover {
   background-color: #5a6268;
 }
+
 

@@ -8,7 +8,7 @@ const Programs = () => {
     <div className="Programs" id="programs">
       
       <div className="programs-header">
-        <span className="stroke-text">Eplore our</span>
+        <span className="stroke-text">Explore our</span>
         <span>Programs</span>
         <span className="stroke-text">to shape you</span>
       </div>
@@ -20,7 +20,7 @@ const Programs = () => {
             <span>{program.heading}</span>
             <span>{program.details}</span>
             <div className="join-now">
-              <span> </span>
+             <a href={program.url} target="blank" ><span>Read More...</span></a> 
              
             </div>
           </div>

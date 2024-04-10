@@ -1,8 +1,6 @@
 import React from "react";
 import Header from "../Header/Header";
 import "./Hero.css";
-import hero_image from "../../assets/hero_image.png";
-import hero_image_back from "../../assets/hero_image_back.png";
 import heart from "../../assets/heart.png";
 import calories from "../../assets/calories.png";
 import { motion } from "framer-motion";
@@ -14,8 +12,15 @@ const Hero = () => {
   const transition = { type: "spring", duration: 3 };
   const mobile = window.innerWidth <= 768 ? true : false;
 
+  const heroStyle = {
+    backgroundImage: `url('https://example.com/your-image.jpg')`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  };
+
   return (
-    <div className="hero" id="hero">
+    <div className="hero" id="hero" style={heroStyle}>
       <div className="blur hero-blur"></div>
       {/* Left Side */}
       <div className="left-h">
@@ -69,12 +74,12 @@ const Hero = () => {
 
         {/* hero buttons */}
         <div className="hero-button">
-       
-          <button className="btn" >Get Started</button>
-         
-        
-          <button className="btn">Learn More</button>
-          
+          <Link to="/join">
+            <button className="btn">Get Started</button>
+          </Link>
+          <Link to="https://pngtree.com/freebackground/fitness-app-gym-application-medicine-photo_10590802.html">
+            <button className="btn">Learn More</button>
+          </Link>
         </div>
       </div>
 
@@ -94,10 +99,17 @@ const Hero = () => {
         </motion.div>
 
         {/* hero images */}
-        <img src={hero_image} alt="" className="hero-image" />
         <motion.img
           initial={{ right: "11rem" }}
           whileInView={{ right: "20rem" }}
+          transition={transition}
+          src={hero_image}
+          alt=""
+          className="hero-image"
+        />
+        <motion.img
+          initial={{ right: "37rem" }}
+          whileInView={{ right: "28rem" }}
           transition={transition}
           src={hero_image_back}
           alt=""
@@ -118,7 +130,6 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
-      
     </div>
   );
 };

@@ -3,6 +3,9 @@ import Header from "../Header/Header";
 import "./Hero.css";
 import heart from "../../assets/heart.png";
 import calories from "../../assets/calories.png";
+
+import hero_image from "../../assets/hero_image.png";
+import hero_image_back from "../../assets/hero_image_back.png";
 import { motion } from "framer-motion";
 import NumberCounter from "number-counter";
 import Footer from "../Footer/Footer";

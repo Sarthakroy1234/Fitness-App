@@ -1,11 +1,11 @@
 import React, { useRef, useState } from "react";
 import "./Join.css";
-import emailjs from "@emailjs/browser";
 
 const Join = () => {
   const form = useRef();
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [formData, setFormData] = useState({});
+  const [showErrorMessage, setShowErrorMessage] = useState(false);
 
   const closeSuccessMessage = () => {
     setShowSuccessMessage(false);
@@ -23,22 +23,15 @@ const Join = () => {
     e.preventDefault();
     console.log(formData);
     try {
-      const response = await fetch("http://localhost:8000/api/user/putdata", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      const data = await response.json();
-      console.log(data);
-      if (response.ok) {
-        setShowSuccessMessage(true);
-      } else {
-        console.error("Failed to submit form data");
-      }
+      // Simulate form submission by logging form data
+      console.log("Form data submitted:", formData);
+      setShowSuccessMessage(true);
+      setShowErrorMessage(false);
+      setFormData({}); // Clear form data after submission
     } catch (error) {
       console.error("Error submitting form data:", error);
+      setShowSuccessMessage(false);
+      setShowErrorMessage(true);
     }
   };
 
@@ -98,6 +91,11 @@ const Join = () => {
         <div className="success-message">
           <p>Your form has been submitted successfully!</p>
           <button onClick={closeSuccessMessage}>Close</button>
+        </div>
+      )}
+      {showErrorMessage && (
+        <div className="error-message">
+          <p>Oops! Something went wrong. Please try again later.</p>
         </div>
       )}
     </div>

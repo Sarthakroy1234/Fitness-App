@@ -75,13 +75,14 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <a
-              href="https://www.calculator.net/bmi-calculator.html"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+            to='/bmi'
             >
+           
               Bmi-Calculator
-            </a>
+            
+            </Link>
+            
           </li>
           <li>
             <a

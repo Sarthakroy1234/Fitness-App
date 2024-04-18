@@ -85,13 +85,7 @@ const Header = () => {
             
           </li>
           <li>
-            <a
-              href="https://www.calculator.net/calories-burned-calculator.html"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Calories-Calculator
-            </a>
+            <Link to = '/calo'>Calories Calculator</Link>
           </li>
           <li>
             <Link

@@ -1,21 +1,21 @@
 .BMIcalculator {
-  max-width: 400px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 100px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #f8f8f8;
+  background-color:transparent;
 }
 
 .BMIcalculator h2 {
-  margin-bottom: 20px;
-  color: #333;
+  margin-bottom: 40px;
+  color: #f7f3f3;
 }
 
 .BMIcalculator label {
   display: block;
   margin-bottom: 10px;
-  color: #555;
+  color: #ffffff;
 }
 
 .BMIcalculator input {
@@ -29,7 +29,7 @@
 
 .BMIcalculator button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: transparent;
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -37,7 +37,7 @@
 }
 
 .BMIcalculator button:hover {
-  background-color: #0056b3;
+  background-color: orange;
 }
 
 .BMIcalculator p {
@@ -45,3 +45,16 @@
   font-weight: bold;
   color: #333;
 }
+.background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -1;
+}
+
+.background-video video {
+  object-fit: cover;
+}
+

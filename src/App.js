@@ -10,7 +10,8 @@ import Footer from "./components/Footer/Footer.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header.jsx";
 import GetStarted from "./components/GetStarted/Get.jsx";
-import BMIcalculator from "./components/BMIcalculator/BMIcalculator"; // Corrected import statement
+import BMIcalculator from "./components/BMIcalculator/BMIcalculator";
+import Caloriecalculator from "./components/Caloriecalculator/Caloriecalculator.jsx";
 
 function App() {
   return (
@@ -27,7 +28,8 @@ function App() {
           <Route path="/testi" element={<Testimonials />} />
           <Route path="/join" element={<Join />} />
           <Route path="/get" element={<GetStarted />} />
-          <Route path="/bmi" element={<BMIcalculator />} /> {/* Corrected component usage */}
+          <Route path="/bmi" element={<BMIcalculator />} />
+          <Route path="/calo" element={<Caloriecalculator />} /> 
 
         </Routes>
 

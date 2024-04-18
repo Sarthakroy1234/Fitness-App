@@ -1,4 +1,4 @@
-/* .header {
+ .header {
   display: flex;
   justify-content: space-between;
  
@@ -12,14 +12,13 @@
 
 .header-menu {
   list-style: none;
-  display: flex;
-  gap: 2rem;
+  gap: 1rem;
   color: white;
 }
 
 .header-menu > li:hover {
   cursor: pointer;
-  color: lightcoral;
+  color: rgb(231, 24, 24);
 }
 
 @media screen and (max-width: 768px) {
@@ -28,20 +27,14 @@
     right: 2rem;
     z-index: 99;
   }
-
-  .header-menu {
-    flex-direction: column;
-    background-color: lightcoral;
-    padding: 2rem;
-  }
-} */
-/* .header {
+} 
+ .header {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80px; /* Adjust height as needed */
-  /* background-color: var(--appColor); */
-
+   background-color: var(--appColor); 
+ }
 
 .logo {
   height: 50px; /* Adjust logo size as needed */
@@ -49,58 +42,32 @@
   margin-left: 20px; /* Adjust left margin as needed */
 }
 
-.header-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.header-menu li {
-  margin: 0 10px; /* Adjust spacing between menu items */
-}
 
 .header-menu li a {
   color: white;
   text-decoration: none;
-  font-size: 20px; /* Adjust font size as needed */
+  font-size: 15px; /* Adjust font size as needed */
   transition: color 0.3s ease;
 }
 
 .header-menu li a:hover {
-  color: lightcoral; /* Change color on hover */
-} 
-
-.header-menu {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-.header-menu li {
-  margin-right: 10px;
-}
-
-.header-menu li:last-child {
-  margin-right: 0;
+  color: orange; 
 }
 
 .join-button {
   padding: 8px 16px;
   border: none;
   border-radius: 5px;
-  background-color: #f44336; /* Change this to the desired color */
-  color: white;
+  background-color: #b70e02; /* Change this to the desired color */
+  color: rgb(214, 180, 180);
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s;
+  margin: 40px;
 }
 
 .join-button:hover {
-  background-color: #d32f2f; /* Change this to the desired hover color */
+  background-color: #e8e8e8; /* Change this to the desired hover color */
 }
 
 .logo {
@@ -122,23 +89,23 @@
   margin-right: 0;
 }
 
-.logo {
+/* .logo {
   height: 40px;
   margin-right: auto;
-}
+} */
 
-.header-menu li a {
+/*.header-menu li a {
   text-decoration: none;
-  color: rgb(255, 123, 0);
+  color: rgb(217, 206, 196);
   font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 5px;
+  padding: 10px 15px;
+  border-radius: px;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .header-menu li a:hover {
-  background-color: #f8f9fa;
-  color: #007bff;
+  background-color: transparent;
+  color: orange;
 }
 
 .header-menu li a.active {
@@ -151,14 +118,14 @@
   border: none;
   border-radius: 5px;
   background-color: #f44336; /* Change this to the desired color */
-  color: white;
+  /* color: white;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s;
-}
+} */
 
 .header-menu li .join-button:hover {
-  background-color: #d32f2f; /* Change this to the desired hover color */
+  background-color: #f71010; /* Change this to the desired hover color */
 }
 
 .header-menu li .home-link {

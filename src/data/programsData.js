@@ -69,10 +69,10 @@ export const programsData = [
         />
       </svg>
     ),
-    heading: "  BMI Calculator",
-    url:"https://www.calculator.net/bmi-calculator.html",
-    details:
-      "BMI, or Body Mass Index, is a measurement used to estimate an individual's body fat based on their height and weight. ",
+   // heading: "  BMI Calculator",
+    //url:"https://www.calculator.net/bmi-calculator.html",
+    // details:
+    //   "BMI, or Body Mass Index, is a measurement used to estimate an individual's body fat based on their height and weight. ",
   },
   
 ];

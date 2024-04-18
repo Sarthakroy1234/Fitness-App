@@ -15,15 +15,15 @@ const Hero = () => {
   const transition = { type: "spring", duration: 3 };
   const mobile = window.innerWidth <= 768 ? true : false;
 
-  const heroStyle = {
-    backgroundImage: `url('https://example.com/your-image.jpg')`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-  };
+  // const heroStyle = {
+  //   backgroundImage: `url('https://example.com/your-image.jpg')`,
+  //   backgroundSize: "cover",
+  //   backgroundPosition: "center",
+  //   backgroundRepeat: "no-repeat",
+  // };
 
   return (
-    <div className="hero" id="hero" style={heroStyle}>
+    <div className="hero" id="hero" >
       <div className="blur hero-blur"></div>
       {/* Left Side */}
       <div className="left-h">
@@ -76,22 +76,21 @@ const Hero = () => {
         </div>
 
         {/* hero buttons */}
-        <div className="hero-button">
+        {/* <div className="hero-button">
           <Link to="/join">
             <button className="btn">Get Started</button>
           </Link>
           <Link to="https://pngtree.com/freebackground/fitness-app-gym-application-medicine-photo_10590802.html">
             <button className="btn">Learn More</button>
           </Link>
-        </div>
+        </div> */}
       </div>
 
       {/* Right Side */}
       <div className="right-h">
-        <button className="btn"> PSR GROUP</button>
-
+        {/* <button className="btn"> PSR GROUP</button> */}
         <motion.div
-          initial={{ right: "-1rem" }}
+          initial={{ right: "-2rem" }}
           whileInView={{ right: "4rem" }}
           transition={transition}
           className="heart-rate"
